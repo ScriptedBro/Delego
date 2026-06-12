@@ -15,7 +15,7 @@
     "dev:web": "pnpm --filter @delego/web dev",
     "dev:gateway": "pnpm --filter @delego/gateway dev",
     "lint": "pnpm -r lint",
-    "typecheck": "pnpm -r typecheck",
+    "typecheck": "pnpm --filter @delego/types --filter @delego/utils --filter @delego/ui --filter @delego/sdk build && pnpm -r typecheck",
     "test": "pnpm -r test",
     "test:unit": "pnpm --filter @delego/tests-unit test",
     "test:integration": "pnpm --filter @delego/tests-integration test",
